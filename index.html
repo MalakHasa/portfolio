@@ -3,27 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ملاك حسونة | قريباً</title>
-    <style>
-        body {
-            background-color: #0d1117;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 15vh;
-        }
-        h1 {
-            color: #58a6ff;
-            font-size: 2.5rem;
-        }
-        p {
-            color: #8b949e;
-            font-size: 1.2rem;
-        }
-    </style>
+    <title>ملاك حسونة | Full-Stack Developer</title>
+    <!-- مكتبة أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>مرحباً، أنا ملاك حسونة</h1>
-    <p>جاري بناء الموقع الشخصي وتطويره خطوة بخطوة...</p>
+
+    <!-- شريط التنقل العلوي (ثابت في الأعلى) -->
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="#home">🏠 الرئيسية</a>
+            <a href="#education">🎓 التعليم</a>
+            <a href="#certificates">🏅 الشهادات</a>
+            <a href="#projects">💼 المشاريع</a>
+            <a href="#skills">&lt;/&gt; المهارات</a>
+            <a href="#contact">✉ تواصل</a>
+        </nav>
+        <a href="#home" class="logo">
+            <span>&lt;/Malak&gt;</span> 
+        </a>
+    </header>
+
+    <!-- قسم الرئيسية (Hero Section) -->
+    <section id="home" class="hero-section">
+        <div class="hero-card">
+            <div class="image-container">
+                <img src="images.jpg" alt="ملاك حسونة" class="profile-img">
+            </div>
+            <h1>ملاك عماد اسماعيل حسونة</h1>
+            <p>مهندسة حاسوب | مطورة ويب متكاملة (Full-Stack Developer)</p>
+            
+            <!-- أيقونات التواصل -->
+            <div class="social-icons">
+                <a href="رابط_لينكدإن_هنا" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/MalakHasa" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="رابط_انستجرام_هنا" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <!-- زر تحميل السيرة الذاتية -->
+            <a href="MalakHassouna-CV.pdf" class="cv-btn" download>
+                <i class="fa-solid fa-download"></i> تحميل السيرة الذاتية
+            </a>
+        </div>
+    </section>
+
+    <!-- قسم التعليم (Education Section) -->
+    <section id="education" class="education-section">
+        <h2 class="section-title">التعليم</h2>
+        
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>بكالوريوس هندسة حاسوب</h3>
+                    <p class="institution">الجامعة الإسلامية بغزة</p>
+                    <span class="details">سنة التخرج: 2026 | المعدل: 88.5%</span>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سكربت بسيط لجعل الروابط تتفاعل وتتحدد عند الضغط عليها -->
+    <script>
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                links.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+
 </body>
 </html>
