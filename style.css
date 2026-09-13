@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; /* لتنقل سلس بين الأقسام */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
     direction: rtl;
     text-align: right;
-    padding-top: 80px; /* مسافة لكي لا يختبئ المحتوى تحت الهيدر الثابت */
+    padding-top: 80px;
 }
 
 /* تنسيق شريط التنقل العلوي (ثابت) */
@@ -31,7 +31,6 @@ body {
     z-index: 1000;
 }
 
-/* روابط الأقسام */
 .nav-links {
     display: flex;
     gap: 25px;
@@ -48,14 +47,12 @@ body {
     padding-bottom: 4px;
 }
 
-/* عند المرور أو الضغط تصبح زرقاء وتحتها خط أزرق */
 .nav-links a:hover,
 .nav-links a.active {
     color: #38bdf8;
     border-bottom: 2px solid #38bdf8;
 }
 
-/* الشعار / الاسم */
 .logo {
     color: #ffffff;
     font-size: 1.3rem;
@@ -229,4 +226,329 @@ body {
     background-color: #38bdf8;
     border-radius: 50%;
     border: 2px solid #ffffff;
+}
+
+/* تنسيق قسم الشهادات (Certificates) */
+.certificates-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cert-icon {
+    font-size: 2rem;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.cert-card h3 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.cert-btn {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.2s;
+    align-self: center;
+}
+
+.cert-btn:hover {
+    background-color: #0284c7;
+}
+
+/* تنسيق قسم المشاريع (Projects) */
+.projects-section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-img-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 25px;
+    text-align: right;
+}
+
+.project-info h3 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.github-btn:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+/* تنسيق قسم المهارات (Skills Section) */
+.skills-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.skill-category-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.skill-cat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 12px;
+}
+
+.skill-cat-header i {
+    font-size: 1.4rem;
+    color: #38bdf8;
+}
+
+.skill-cat-header h3 {
+    font-size: 1.1rem;
+    color: #0f172a;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f8fafc;
+    color: #334155;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background-color: #e0f2fe;
+    color: #0284c7;
+    border-color: #38bdf8;
+}
+
+/* تنسيق قسم التواصل (Contact Section) */
+.contact-section {
+    padding: 60px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.input-group textarea + i {
+    top: 25px;
+    transform: none;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #f8fafc;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+    background-color: #ffffff;
+}
+
+.send-btn {
+    width: 100%;
+    background-color: #38bdf8;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.send-btn:hover {
+    background-color: #0284c7;
+}
+
+/* تنسيق الفوتر (Footer) */
+.site-footer {
+    background-color: #090d16;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #1f2937;
+    direction: ltr;
+}
+
+/* تنسيق زر الصعود للأعلى (Scroll-to-Top Button) */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #38bdf8;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn:hover {
+    background-color: #0284c7;
+    transform: translateY(-3px);
 }

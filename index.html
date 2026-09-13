@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ملاك حسونة | Full-Stack Developer</title>
+    <title>ملاك حسونة | Front-End Developer</title>
     <!-- مكتبة أيقونات FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
     <!-- شريط التنقل العلوي (ثابت في الأعلى) -->
     <header class="navbar">
         <nav class="nav-links">
-            <a href="#home">🏠 الرئيسية</a>
+            <a href="#home" class="active">🏠 الرئيسية</a>
             <a href="#education">🎓 التعليم</a>
             <a href="#certificates">🏅 الشهادات</a>
             <a href="#projects">💼 المشاريع</a>
@@ -32,16 +32,14 @@
                 <img src="images.jpg" alt="ملاك حسونة" class="profile-img">
             </div>
             <h1>ملاك عماد اسماعيل حسونة</h1>
-            <p>مهندسة حاسوب | مطورة ويب متكاملة (Full-Stack Developer)</p>
+            <p>مهندسة حاسوب | مطورة واجهات أمامية (Front-End Developer)</p>
             
-            <!-- أيقونات التواصل -->
             <div class="social-icons">
                 <a href="رابط_لينكدإن_هنا" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/MalakHasa" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
                 <a href="رابط_انستجرام_هنا" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
 
-            <!-- زر تحميل السيرة الذاتية -->
             <a href="MalakHassouna-CV.pdf" class="cv-btn" download>
                 <i class="fa-solid fa-download"></i> تحميل السيرة الذاتية
             </a>
@@ -51,7 +49,6 @@
     <!-- قسم التعليم (Education Section) -->
     <section id="education" class="education-section">
         <h2 class="section-title">التعليم</h2>
-        
         <div class="timeline-container">
             <div class="timeline-item">
                 <div class="timeline-content">
@@ -64,14 +61,170 @@
         </div>
     </section>
 
-    <!-- سكربت بسيط لجعل الروابط تتفاعل وتتحدد عند الضغط عليها -->
+    <!-- قسم الشهادات (Certificates Section) -->
+    <section id="certificates" class="certificates-section">
+        <h2 class="section-title">الشهادات</h2>
+        <div class="certificates-grid">
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                <h3>تطوير واجهات المستخدم (Front-End)</h3>
+                <a href="#" class="cert-btn" target="_blank">عرض الشهادة</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-laptop-file"></i></div>
+                <h3>شهادة ICDL الدولية</h3>
+                <a href="#" class="cert-btn" target="_blank">عرض الشهادة</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>بكالوريوس هندسة حاسوب</h3>
+                <a href="#" class="cert-btn" target="_blank">عرض الشهادة</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع (Projects Section) -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">المشاريع</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="grow.jpg" alt="مشروع التخرج" class="project-img">
+                </div>
+                <div class="project-info">
+                    <h3>منصة تعليمية عن بعد (مشروع التخرج)</h3>
+                    <p>موقع كامل فل ستاك (Full-Stack)، عبارة عن منصة تعليمية عن بعد متكاملة الخدمات.</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/NesmaAh-16/Grow" class="github-btn" target="_blank">
+                            <i class="fa-brands fa-github"></i> جيت هب
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المهارات (Skills Section) -->
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">المهارات</h2>
+        <div class="skills-container">
+            <div class="skill-category-card">
+                <div class="skill-cat-header">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>تطوير واجهات الويب (Front-End)</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML5</span>
+                    <span class="skill-tag"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i> CSS3</span>
+                    <span class="skill-tag"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                    <span class="skill-tag"><i class="fa-brands fa-bootstrap" style="color: #7952b3;"></i> Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="skill-category-card">
+                <div class="skill-cat-header">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h3>إدارة المشاريع والنسخ</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i> Git</span>
+                    <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub</span>
+                </div>
+            </div>
+
+            <div class="skill-category-card">
+                <div class="skill-cat-header">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h3>الذكاء الاصطناعي، الإعلانات والمونتاج</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa-solid fa-robot" style="color: #38bdf8;"></i> أدوات الذكاء الاصطناعي للإعلانات</span>
+                    <span class="skill-tag"><i class="fa-solid fa-video" style="color: #ec4899;"></i> أدوات الذكاء الاصطناعي للمونتاج</span>
+                    <span class="skill-tag"><i class="fa-solid fa-palette" style="color: #00c4cc;"></i> Canva للتصميم</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل (Contact Section) -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">التواصل</h2>
+        <div class="contact-card">
+            <form id="whatsappForm">
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="senderName" placeholder="الاسم الكامل" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="senderEmail" placeholder="البريد الإلكتروني" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-message"></i>
+                    <textarea id="senderMessage" placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">إرسال عبر الواتساب</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- تذيل الصفحة (Footer) -->
+    <footer class="site-footer">
+        <p>&copy; 2026 ملاك حسونة. All rights reserved.</p>
+    </footer>
+
+    <!-- زر الصعود لأعلى الصفحة -->
+    <a href="#home" class="scroll-top-btn" id="scrollTopBtn" title="العودة للأعلى">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- جافاسكريبت لتتبع السكرول، تفعيل الهيدر، وإرسال رسالة الواتساب -->
     <script>
-        const links = document.querySelectorAll('.nav-links a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                links.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
             });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        // كود تحويل نموذج التواصل إلى رسالة واتساب مباشرة
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('senderName').value;
+            const email = document.getElementById('senderEmail').value;
+            const message = document.getElementById('senderMessage').value;
+            
+            const phoneNumber = "972592241662";
+            const text = `مرحباً ملاك، رسالة جديدة من موقعك الشخصي:\n\n👤 الاسم: ${name}\n📧 الإيميل: ${email}\n💬 الرسالة: ${message}`;
+            
+            const encodedText = encodeURIComponent(text);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+            
+            window.open(whatsappURL, '_blank');
         });
     </script>
 
