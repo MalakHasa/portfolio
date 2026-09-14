@@ -552,3 +552,97 @@ body {
     background-color: #0284c7;
     transform: translateY(-3px);
 }
+
+/* تنسيقات التجاوب مع الأجهزة الذكية (Responsive Design) */
+
+/* للشاشات المتوسطة (الأجهزة اللوحية وبعض الهواتف الكبيرة) */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    /* تعديل الهيدر ليصبح مناسباً للشاشات الصغيرة */
+    .navbar {
+        padding: 12px 15px;
+        flex-direction: row-reverse;
+    }
+
+    .nav-links {
+        gap: 12px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    /* تعديل قسم الرئيسية */
+    .hero-section {
+        padding: 30px 15px;
+    }
+
+    .hero-card {
+        padding: 25px 20px;
+    }
+
+    .hero-card h1 {
+        font-size: 1.4rem;
+    }
+
+    /* تعديل أقسام المحتوى العامة */
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .education-section,
+    .certificates-section,
+    .projects-section,
+    .skills-section,
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+}
+
+/* للشاشات الصغير جداً (الهواتف الذكية الضيقة) */
+@media screen and (max-width: 480px) {
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .hero-card {
+        padding: 20px 15px;
+    }
+
+    .profile-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .hero-card h1 {
+        font-size: 1.25rem;
+    }
+
+    .hero-card p {
+        font-size: 0.85rem;
+    }
+
+    .cert-card,
+    .skill-category-card {
+        padding: 20px 15px;
+    }
+}
