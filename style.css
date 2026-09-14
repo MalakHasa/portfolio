@@ -10,10 +10,10 @@
 
 body {
     background-color: #f1f5f9;
-    color: #0f172a;            /* لون نص داكن وواضح جداً (أسود مائل للزرقة الغامقة) */
+    color: #0f172a;
     font-family: 'Tajawal', sans-serif, Arial;
-    font-size: 1.15rem;        /* تكبير حجم الخط الأساسي للموقع */
-    font-weight: 500;          /* جعل الخط العام سميكاً وواضحاً */
+    font-size: 1.15rem;
+    font-weight: 500;
     line-height: 1.8;
     direction: rtl;
     text-align: right;
@@ -30,28 +30,36 @@ body {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* اللوجو يمين والروابط يسار في الكمبيوتر */
     align-items: center;
     background-color: #090d16;
-    padding: 15px 30px;
+    padding: 15px 35px;
     border-bottom: 1px solid #1f2937;
     z-index: 1000;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 22px;
     align-items: center;
 }
 
 .nav-links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.1rem;         /* تكبير خط روابط الهيدر */
-    font-weight: 700;          /* تغميق خط الروابط */
+    font-size: 1.05rem;
+    font-weight: 700;
     transition: color 0.2s ease;
     position: relative;
     padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-links a i {
+    font-size: 0.95rem;
+    color: #38bdf8;
 }
 
 .nav-links a:hover,
@@ -66,15 +74,22 @@ body {
     font-weight: bold;
     text-decoration: none;
     direction: ltr;
-    transition: opacity 0.2s;
 }
 
 .logo span {
     color: #38bdf8;
 }
 
+/* زر القائمة المنسدلة (مخفي بالشاشات الكبيرة) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
 /* ==========================================
-   3. قسم الرئيسية (Hero) - بطاقة أوسع وأوضح
+   3. قسم الرئيسية (Hero Section)
    ========================================== */
 .hero-section {
     display: flex;
@@ -90,7 +105,7 @@ body {
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     text-align: center;
-    max-width: 650px;           /* توسيع البطاقة لتبدو أريح */
+    max-width: 650px;
     width: 100%;
 }
 
@@ -114,14 +129,14 @@ body {
 }
 
 .hero-card h1 {
-    font-size: 2.1rem;          /* تكبير الاسم وتغميقه بشكل بارز */
+    font-size: 2.1rem;
     color: #020617;
     font-weight: 800;
     margin-bottom: 12px;
 }
 
 .hero-card p {
-    font-size: 1.2rem;          /* تكبير الوصف وتغميقه */
+    font-size: 1.2rem;
     color: #334155;
     font-weight: 600;
     margin-bottom: 25px;
@@ -445,7 +460,7 @@ body {
 }
 
 /* ==========================================
-   9. قسم التواصل (Contact Section)ممممممم
+   9. قسم التواصل (Contact Section)
    ========================================== */
 .contact-section {
     padding: 60px 20px;
@@ -465,7 +480,6 @@ body {
     margin-bottom: 22px;
 }
 
-/* تنسيق الأيقونات داخل الحقول لتصبح في الجهة اليسرى أو مرتبة بشكل صحيح */
 .input-group i {
     position: absolute;
     left: 18px;
@@ -475,7 +489,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* تعديل موضع أيقونة الترايت الخاصة بالرسالة لتكون بالأعلى قليلاً */
 .input-group textarea ~ i {
     top: 25px;
     transform: none;
@@ -483,7 +496,7 @@ body {
 
 .input-group input {
     width: 100%;
-    padding: 14px 15px 14px 50px; /* مساحة لليسار لكي لا يختبئ النص تحت الأيقونة */
+    padding: 14px 15px 14px 50px;
     border: 1.5px solid #94a3b8;
     border-radius: 8px;
     font-family: 'Tajawal', sans-serif;
@@ -581,66 +594,69 @@ body {
 }
 
 /* ==========================================
-   11. التجاوب مع الأجهزة الذكية (Responsive)
+   11. التجاوب مع الهواتف والأجهزة الذكية (Responsive Design)
    ========================================== */
 @media screen and (max-width: 768px) {
     body {
-        padding-top: 110px; /* زيادة المساحة العلوية لتناسب الهيدر المكون من سطرين */
+        padding-top: 75px;
+        font-size: 1.05rem;
     }
 
-    /* تنظيم الهيدر على الموبايل: الشعار بالأعلى والروابط تحته بشكل أنيق ومنتظم */
     .navbar {
-        flex-direction: column;
-        padding: 10px 15px;
-        gap: 8px;
+        padding: 12px 20px;
+        flex-direction: row; /* الحفاظ على اللوجو يمين وزر القائمة يسار في نفس السطر */
     }
 
-    .logo {
-        font-size: 1.2rem;
+    /* إظهار زر القائمة المنسدلة في الجهة اليسرى على الجوال */
+    .menu-toggle {
+        display: block;
     }
 
+    /* قائمة منسدلة تفتح لأسفل بسلاسة */
     .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: #090d16;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
         width: 100%;
-        justify-content: center;
-        gap: 15px;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 5px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        max-height: 380px;
+        padding: 15px 0;
+        border-bottom: 1px solid #1f2937;
     }
 
     .nav-links a {
-        font-size: 0.85rem;
-    }
-
-    /* تصغير وتعديل حجم صورة المشروع على الهواتف لتصبح متناسقة */
-    .project-img-container {
-        height: 180px; /* تقليل ارتفاع حاوية الصورة لتناسب الجوال */
-    }
-
-    .project-img {
+        padding: 12px 0;
+        font-size: 1.05rem;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        justify-content: center; /* توسيط النص والأيقونة في القائمة المنسدلة */
     }
 
-    /* تصغير هوامش البطاقات لتستغل عرض الشاشة بمرونة ة*/
+    .nav-links a:hover,
+    .nav-links a.active {
+        background-color: #1f2937;
+        border-bottom: none;
+        color: #38bdf8;
+    }
+
+    /* ضبط حجم صورة المشروع على الهواتف */
+    .project-img-container {
+        height: 180px;
+    }
+
     .hero-card,
     .contact-card,
     .project-card {
-        padding: 20px 15px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .nav-links {
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 0.8rem;
-    }
-
-    .project-img-container {
-        height: 150px;
+        padding: 25px 20px;
     }
 }
