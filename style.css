@@ -585,33 +585,62 @@ body {
    ========================================== */
 @media screen and (max-width: 768px) {
     body {
-        padding-top: 75px;
-        font-size: 1.05rem;
+        padding-top: 110px; /* زيادة المساحة العلوية لتناسب الهيدر المكون من سطرين */
     }
 
+    /* تنظيم الهيدر على الموبايل: الشعار بالأعلى والروابط تحته بشكل أنيق ومنتظم */
     .navbar {
-        padding: 12px 15px;
         flex-direction: column;
-        gap: 10px;
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 
     .nav-links {
-        gap: 15px;
-        overflow-x: auto;
         width: 100%;
         justify-content: center;
+        gap: 15px;
+        overflow-x: auto;
+        white-space: nowrap;
         padding-bottom: 5px;
     }
 
     .nav-links a {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
-    .hero-card {
-        padding: 30px 20px;
+    /* تصغير وتعديل حجم صورة المشروع على الهواتف لتصبح متناسقة */
+    .project-img-container {
+        height: 180px; /* تقليل ارتفاع حاوية الصورة لتناسب الجوال */
     }
 
-    .hero-card h1 {
-        font-size: 1.8rem;
+    .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* تصغير هوامش البطاقات لتستغل عرض الشاشة بمرونة ة*/
+    .hero-card,
+    .contact-card,
+    .project-card {
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .project-img-container {
+        height: 150px;
     }
 }
